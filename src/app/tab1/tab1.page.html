@@ -1,0 +1,49 @@
+<!-- This section builds the header for Android devices -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Basic UI Components
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- This section builds the header for Apple devices -->
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Basic UI Components</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- 
+    This line uses a custom component, we will be talking about this later on. 
+    I commented it out since we do not need it in this example 
+  -->
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+
+
+  <!-- 
+    The below components were copied over from the official Ionic Documentation.
+    The 'color' attribute acts like Bootstrap classes to apply colours from the default colour scheme.
+    To use these elements, the TS file of this page needed some imported modules.
+  -->
+  <ion-text color="primary">
+    <h1>H1: The quick brown fox jumps over the lazy dog</h1>
+  </ion-text>
+
+  <ion-text color="secondary">
+    <h2>H2: The quick brown fox jumps over the lazy dog</h2>
+  </ion-text>
+
+  <ion-text color="tertiary">
+    <h3>H3: The quick brown fox jumps over the lazy dog</h3>
+  </ion-text>
+
+  <p>
+    <ion-text color="warning"><ion-icon name="warning"></ion-icon></ion-text>
+    I saw a werewolf with a Chinese menu in his hand. Walking through the
+    <ion-text color="success"><sub>streets</sub></ion-text> of Soho in the rain. He
+    <ion-text color="medium"><i>was</i></ion-text> looking for a place called Lee Ho Fook's. Gonna get a
+    <ion-text color="danger">big dish of beef chow mein.</ion-text>
+  </p>
+</ion-content>

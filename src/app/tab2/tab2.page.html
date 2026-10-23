@@ -1,0 +1,119 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Interpolation of Property Values
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Interpolation of Property Values</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- The Explore-Container was completely removed from this page, as it is unnecessary -->
+
+  <!-- The below is a simple example of a grid, which works like a basic HTML table -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          Row 1 - Col 1
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          Row 1 - Col 2
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        1
+      </ion-col>
+      <ion-col>
+        2
+      </ion-col>
+      <ion-col>
+        3
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <!-- 
+            This is interpolation, 
+            which can access the value of a property from the TS file of the page 
+          -->
+          {{first}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{second}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+    
+    <ion-grid>
+    <ion-row>
+      <ion-col>
+        <!-- 
+          Normal CSS classes can be used, just like any other HTML file.
+          These classes were created in the SCSS file of this page, making them only available in this page.
+        -->
+        <ion-text class="tableHeader">
+          Name
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="tableHeader">
+          Surname
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="tableHeader">
+          Age
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <!-- Interpolation can also be used to access values of properties in object -->
+          {{person.name}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person.surname}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person.age}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          {{person2.name}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person2.surname}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person2.age}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
