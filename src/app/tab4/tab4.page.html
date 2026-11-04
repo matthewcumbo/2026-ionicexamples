@@ -10,4 +10,36 @@
       <ion-title size="large">Forms</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <form [formGroup]="formGroup" (ngSubmit)="submit();">
+    <ion-list>
+      <ion-item>
+        <ion-label>First Name:</ion-label>
+        <ion-input formControlName="firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Last Name:</ion-label>
+        <ion-input formControlName="lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Age:</ion-label>
+        <ion-input formControlName="age"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" type="submit">Save</ion-button>
+  </form>
+
+  @if(showDetails){
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>First Name: {{firstName}}</ion-card-title>
+        <ion-card-subtitle>Last Name: {{lastName}}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Age: {{age}}
+      </ion-card-content>
+    </ion-card>
+  }
+  
 </ion-content>

@@ -1,19 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonLabel, IonInput, IonItem, IonButton, IonCard, IonCardTitle, IonCardHeader, IonCardSubtitle, IonCardContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
   styleUrls: ['./tab4.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+    imports: [IonCard, IonCardContent, IonCardContent, IonCardContent, IonCardSubtitle, IonCardHeader, IonCardTitle, IonButton, IonItem, IonInput, IonLabel, IonList, IonHeader, IonToolbar, IonTitle, IonContent, ReactiveFormsModule]
 })
-export class Tab4Page implements OnInit {
+export class Tab4Page {
 
-  constructor() { }
+firstName = "";
+  lastName = "";
+  age = "";
+  showDetails = false;
 
-  ngOnInit() {
+  formGroup = new FormGroup({
+    firstName: new FormControl(),
+    lastName: new FormControl(),
+    age: new FormControl(),
+  });
+
+  constructor() {}
+
+  submit(){
+    this.firstName = this.formGroup.controls.firstName.value;
+    this.lastName = this.formGroup.controls.lastName.value;
+    this.age = this.formGroup.controls.age.value;
+
+    if(this.firstName !== null && this.lastName !== null && this.age !== null ){
+      this.showDetails = true;
+    }
   }
 
 }
