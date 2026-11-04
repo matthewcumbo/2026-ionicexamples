@@ -48,7 +48,17 @@
 
   <ion-list>
     <ion-list-header><h1>{{header2}}</h1></ion-list-header>
+    <!-- 
+      @for is a For Loop.
+      Anything within the curly brackets is repeated for every element in the list being looped,\
+      the 'list' array in this case
+    -->
     @for (c of list; track c){
+      <!--  
+      @if is a conditional statement. 
+        If the condition in the brackets is true, the code within the curly brackets is executed.
+        In this case, if the 'capital' property of the current element in the loop is false, the code within the brackets is executed
+      -->
       @if(!c.capital){
         <ion-item>
           <ion-label>
