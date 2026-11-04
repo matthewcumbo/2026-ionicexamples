@@ -11,22 +11,47 @@ export class Tab3Page {
   constructor() {}
 
   header = "Capital Cities";
+  header2 = "Cities";
   list = [
     {
-      country:"Malta",
-      city:"Valletta"
+      country: "Malta",
+      city: "Valletta",
+      capital: true
     },
     {
-      country:"England",
-      city:"London"
+      country: "England",
+      city: "London",
+      capital: true
     },
     {
-      country:"Italy",
-      city:"Rome"
+      country: "Italy",
+      city: "Rome",
+      capital: true
     },
     {
-      country:"France",
-      city:"Paris"
+      country: "France",
+      city: "Paris",
+      capital: true
+    },
+    {
+      country: "Malta",
+      city: "Mosta",
+      capital: false
+    },
+    {
+      country: "England",
+      city: "Newcastle",
+      capital: false
+    },
+    {
+      country: "Italy",
+      city: "Milan",
+      capital: false
+    },
+    {
+      country: "France",
+      city: "Marseille",
+      capital: false
     }
   ];
 }
