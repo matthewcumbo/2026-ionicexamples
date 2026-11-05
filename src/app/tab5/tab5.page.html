@@ -1,13 +1,49 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>tab5</ion-title>
+    <ion-title>
+      Filter Example
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">tab5</ion-title>
+      <ion-title size="large">Filter Example</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button color="primary" fill="solid" (click)="filter('PHP');">
+        PHP & Databases
+      </ion-button>
+      <ion-button color="primary" fill="solid" (click)="filter('Apps');">
+        Mobile Apps
+      </ion-button>
+      <ion-button color="primary" fill="solid" (click)="filter('Game');">
+        Game Development
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-list>
+    @for (s of students; track $index) {
+      @if (s.units.includes(current)) {
+      <ion-card>
+        <ion-card-title>{{s.name}} {{s.surname}}</ion-card-title>
+        <ion-card-subtitle>{{s.class}}</ion-card-subtitle>
+        @for (u of s.units; track $index) {
+          <ion-list>
+            <ion-item>
+              {{u}}
+            </ion-item>
+          </ion-list>
+        }
+      </ion-card>
+      }
+  }
+  </ion-list>
+
+
 </ion-content>
