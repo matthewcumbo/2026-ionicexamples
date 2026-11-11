@@ -33,13 +33,13 @@
       <ion-card>
         <ion-card-title>{{s.name}} {{s.surname}}</ion-card-title>
         <ion-card-subtitle>{{s.class}}</ion-card-subtitle>
-        @for (u of s.units; track $index) {
-          <ion-list>
+        <ion-list>
+          @for (u of s.units; track $index) {
             <ion-item>
               {{u}}
             </ion-item>
-          </ion-list>
-        }
+          }
+        </ion-list>
       </ion-card>
       }
   }
